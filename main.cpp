@@ -52,11 +52,34 @@ int main(int argc, char **argv) {
     cout << "getCapacity() after many adds: " << ht.getCapacity() << " (16 expected)" << endl;
 
     // test simple delete
-    cout << "remove \"90\" from hashtable containing \"90\" which is in the table: \"" << ht.remove("90") << "\" (\"0\" expected)" << endl;
+    cout << "remove \"90\" from hashtable containing \"90\" which is in the table: \"" << ht.remove("90") << "\" (\"90\" expected)" << endl;
     cout << "find value (90): \"" << ht.find("90") << "\" (expected \"\")" << endl;
 
     // "complex" getSize test
     cout << "getSize() after many adds and one delete: " << ht.getSize() << " (15 expected)" << endl;
+
+    Hashtable myTable(10);
+
+    cout << "getSize() of new HashTable after initialized: " << myTable.getSize() << " (15 expected)" << endl;
+
+
+    // Add some values that we know will cause collisions
+    myTable.add("abc");
+    myTable.add("bca");
+    myTable.add("cab");
+    myTable.add("bac");
+    myTable.add("cba");
+    myTable.add("acb");
+
+    //the number of collisions that occurred
+    cout << "Number of collisions: " << myTable.getCollisions() << endl;
+
+    // the size of the hashtable
+    cout << "Size of Hashtable: " << myTable.getSize() << endl;
+
+    // convert int to double for #of collision, allows FPU/IEEE
+    double collisionRatio = static_cast<double>(myTable.getCollisions()) / myTable.getSize();
+    cout << "Collision Ratio: " << collisionRatio << endl;
 
     return 0;
 }
