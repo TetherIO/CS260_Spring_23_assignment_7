@@ -60,7 +60,7 @@ int main(int argc, char **argv) {
 
     Hashtable myTable(10);
 
-    cout << "getSize() of new HashTable after initialized: " << myTable.getSize() << " (15 expected)" << endl;
+    cout << "getSize() of new HashTable after initialized: " << myTable.getSize() << " (0 expected)" << endl;
 
 
     // Add some values that we know will cause collisions
