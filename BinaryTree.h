@@ -1,14 +1,11 @@
-//
-// Created by user7 on 5/24/2023.
-//
-
 #ifndef CS260_SPRING_23_ASSIGNMENT_7_BINARYTREE_H
 #define CS260_SPRING_23_ASSIGNMENT_7_BINARYTREE_H
 
 
-class BinaryTree {
+#include <string>
 
-};
+using std::string;
+
 
 
 #endif //CS260_SPRING_23_ASSIGNMENT_7_BINARYTREE_H
