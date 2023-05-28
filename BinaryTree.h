@@ -21,6 +21,21 @@ public:
     Node *root; // pointer to the root node of the BinaryTree
 
       //constructor for BinaryTree, initializes root to nullptr
+    // Constructor for BinaryTree, initializes root to NULL.
+    BinaryTree() : root(NULL) {}
 
+    //helper method for the public insert method.
+    Node *insertNode(Node *root, string key);
+
+    // insert a key into the BinaryTree.
+    void insert(string key);
+
+    // helper method for the public find method
+    bool findNode(Node *root, string key);
+
+    // check if a key exists in the BinaryTree.
+    bool find(string key);
+};
 
 #endif //CS260_SPRING_23_ASSIGNMENT_7_BINARYTREE_H
+
