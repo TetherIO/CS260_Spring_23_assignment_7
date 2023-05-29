@@ -28,6 +28,11 @@ int Hashtable::hash(string key) {
 
 
 //=get the number of keys currently stored
-
+int Hashtable::getSize() {
+    return size;
+}
 
 // get the current capacity
+int Hashtable::getCapacity() {
+    return capacity;
+}
