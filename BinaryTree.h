@@ -21,8 +21,7 @@ public:
     Node *root; // pointer to the root node of the BinaryTree
 
       //constructor for BinaryTree, initializes root to nullptr
-    // Constructor for BinaryTree, initializes root to NULL.
-    BinaryTree() : root(NULL) {}
+    BinaryTree() : root(nullptr) {}
 
     //helper method for the public insert method.
     Node *insertNode(Node *root, string key);
